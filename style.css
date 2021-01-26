@@ -40,8 +40,10 @@ button{
 nav{
     float: right;
     grid-area: nav;
-    text-align: right;
-    
+    text-align: right;   
+}
+.logo2{
+    display: none;
 }
 .menu-hamb{
     margin: 0 30px 0 0;
@@ -50,10 +52,6 @@ nav{
     text-decoration: none;
     color: #6f6f89;
     margin: 0 10px;
-    
-    
-    
-    
 }
 label{
     display: none;
@@ -387,10 +385,32 @@ label{
 .contenedor-logo{
     display: none;
 }
+
+nav {
+    
+    background: #3a596d;
+    height: 40px;
+    box-shadow: 1px 1px 10px 2px rgba(0, 0, 0, 0.2);
+    z-index: 3;
+    
+    
+}
+.logo2 {
+    display: block;
+    position: absolute;
+    height: 34px;
+    margin: 2px 0px 2px 30px;
+    z-index: 4;
+    
+    
+}
 label {
     display: flex;
     float: right;
     flex-direction: column;
+    color: #EAEAEB;
+    font-size: 30px;
+    
 }
 
 .menu-hamb{
@@ -399,6 +419,10 @@ label {
     width: 100%;
     flex-direction: column;
     border-bottom: 1px solid #EAEAEB;
+    
+    
+    
+    
 }
 .menu-hamb a{
     display: flex;
@@ -408,6 +432,8 @@ label {
     color: white;
     border-bottom: 1px solid lightgrey;
     line-height: 40px;  
+    
+    
 }
 #toggle:checked +.menu-hamb{
     display:flex;
@@ -416,8 +442,10 @@ label {
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    margin-top: 30px;
     margin-bottom: 30px;
     height: max-content;
+    z-index: 1;
 
 }
 .contenedor-logo {
