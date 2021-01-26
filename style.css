@@ -10,11 +10,13 @@ body {
 
 header{
 
-    display: flex;
+    display: grid;
+    grid-template-areas: 'logo nav';
     width: 90%;
     height: 100px;
     margin: auto;
     align-items: center;
+    
 }
 
 button{
@@ -25,7 +27,7 @@ button{
 }
 
 .contenedor-logo{
-    
+    grid-area: logo;
     height: 100%;
     flex: 3;
     align-items: center;
@@ -36,18 +38,32 @@ button{
     cursor: pointer;
 }
 nav{
+    float: right;
+    grid-area: nav;
+    text-align: right;
     
-    flex: 2;
 }
-.links-nav{
-    text-align: center;
-    justify-content: space-around;
-    list-style: none;
+.menu-hamb{
+    margin: 0 30px 0 0;
 }
-.link-nav{
-    color: #3a596d;
+.menu-hamb a {
     text-decoration: none;
-    font-size: 18px;
+    color: #6f6f89;
+    margin: 0 10px;
+    
+    
+    
+    
+}
+label{
+    display: none;
+    margin: 0 40px 0 0;
+    font-size: 26px;
+    color: #6f6f89;  
+    cursor: pointer;
+}
+#toggle{
+    display: none;
 }
 .boton-i-nav{
     
@@ -70,7 +86,7 @@ nav{
     width: 90%;
     height: 350px;
     align-items: center;
-    margin: auto;
+    margin: 5px auto;
     
 }
 .introduccion {
@@ -136,7 +152,7 @@ nav{
     display: grid;
     grid-template-rows: 60px;
     grid-template-columns: 300px;
-    grid-template-areas: 'header header header'
+    grid-template-areas: 'titulo titulo titulo'
     'mid mid1 mid2';
     justify-content: center; 
     height: 650px;
@@ -149,7 +165,7 @@ nav{
 
 .titulo-servicios{
     display: flex;
-    grid-area: header;
+    grid-area: titulo;
     margin: auto; 
 }
 
@@ -357,17 +373,45 @@ nav{
 }
 
 @media screen and (max-width: 1024px) { 
+    
+    header{
 
-header{
-
-        display: flex; 
-        width: 90%;
-        height: 100px;
+        display: grid;
+        grid-template-areas: 'nav';
+        width: 100%;
+        height: auto;
         margin: auto;
         align-items: center;
         
-        
     }
+.contenedor-logo{
+    display: none;
+}
+label {
+    display: flex;
+    float: right;
+    flex-direction: column;
+}
+
+.menu-hamb{
+    display: none;
+    text-align: center;
+    width: 100%;
+    flex-direction: column;
+    border-bottom: 1px solid #EAEAEB;
+}
+.menu-hamb a{
+    display: flex;
+    flex-direction: column;
+    height: 40px;
+    background:#3a596d;
+    color: white;
+    border-bottom: 1px solid lightgrey;
+    line-height: 40px;  
+}
+#toggle:checked +.menu-hamb{
+    display:flex;
+}
 .presentacion{
     flex-direction: column;
     justify-content: center;
